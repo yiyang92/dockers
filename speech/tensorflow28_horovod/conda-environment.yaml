@@ -1,0 +1,20 @@
+name: tts-tacotron
+
+channels:
+  - conda-forge
+dependencies:
+  - ccache=4.5.1
+  - cmake=3.23.1
+  - cudatoolkit=11.2.2
+  - cudnn=8.1.0.77
+  - mpi4py=3.1.3 # installs cuda-aware openmpi
+  - nccl=2.12.12.1
+  - nvcc_linux-64=11.2
+  - openmpi=4.1.3
+  - python=3.8
+  - pip=22.1
+  - yaml=0.2.5
+  - numpy=1.21.5
+  - ipython=8.2.0
+  - pip:
+    - tensorflow-gpu==2.8.*
