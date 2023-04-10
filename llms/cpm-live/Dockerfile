@@ -16,6 +16,7 @@ RUN apt-get update \
         librdmacm1 \
         vim \
         g++ \
+        unzip \
     && apt-get clean
 
 # Copy cuda devel from nvidia docker

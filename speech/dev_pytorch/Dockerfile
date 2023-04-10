@@ -18,6 +18,8 @@ RUN apt-get update \
         software-properties-common \
         vim \
         g++ \
+        unzip \
+        file \
     && apt-get clean
 
 COPY . /requirements

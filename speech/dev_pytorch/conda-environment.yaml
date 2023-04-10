@@ -12,9 +12,14 @@ dependencies:
   - pytorch-cuda=11.7
   - pip=23.0
   - pip:
-    - tensorboard==2.12
-    - tqdm==4.65
-    - opendelta==0.3.2
+    - tensorboard~=2.12
+    - tqdm~=4.65
+    - opendelta~=0.3.2
+    - gdown~=4.7
+    - mypy~=1.1
+    - boto3~=1.18
+    - botocore~=1.21
+    - flake8~=6.0
     - jupyterlab
     - torch-summary
     - speechbrain
@@ -26,6 +31,6 @@ dependencies:
     - librosa
     - gitpython
     - cython
-    - botocore~=1.21
-    - boto3~=1.18
     - numba
+    - matplotlib
+    - nltk
