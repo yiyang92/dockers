@@ -2,11 +2,11 @@ ARG CUDA_IMAGE=11.7.0-devel-ubuntu18.04
 FROM nvidia/cuda:${CUDA_IMAGE} as cuda_source
 FROM continuumio/miniconda3:22.11.1
 
-# Proxy (if needed)
+# Proxy (if needed), args only used during building as --build-arg
 ARG HTTP_PROXY
-ENV HTTPS_PROXY=${HTTP_PROXY}
-ENV http_proxy=${HTTP_PROXY}
-ENV https_proxy=${HTTP_PROXY}
+ARG HTTPS_PROXY=${HTTP_PROXY}
+ARG http_proxy=${HTTP_PROXY}
+ARG https_proxy=${HTTP_PROXY}
 
 # Build packages
 RUN apt-get update \
@@ -17,6 +17,9 @@ RUN apt-get update \
         vim \
         g++ \
         unzip \
+        neofetch \
+        man \
+        file \
     && apt-get clean
 
 # Copy cuda devel from nvidia docker
@@ -36,3 +39,4 @@ SHELL ["/bin/bash", "--login", "-c"]
 
 # Default entrypoint
 CMD ["/bin/bash", "--login"]
+

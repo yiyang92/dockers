@@ -17,7 +17,7 @@ then
 fi
 
 # Assign parameters to variables
-proxy=${1:-"http://172.23.32.1:7890"}  # Local wsl 
+proxy=${1:""}  # Local wsl 
 tag=${2:-"pytorch_speech_dev"}
 
 # Build Docker container

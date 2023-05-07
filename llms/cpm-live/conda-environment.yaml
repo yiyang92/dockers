@@ -17,7 +17,10 @@ dependencies:
     - tensorboard==2.12
     - tqdm==4.65
     - opendelta==0.3.2
-    - jupyterlab
+    - jupyterlab~=3.6
     - mypy~=1.1
     - flake8~=6.0
     - black~=23.3
+    - gpustat~=1.1
+    - isort~=5.12
+    - scikit-learn

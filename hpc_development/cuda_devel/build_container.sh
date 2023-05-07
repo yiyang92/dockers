@@ -17,12 +17,12 @@ then
 fi
 
 # Assign parameters to variables
-proxy=${1:-"http://172.23.32.1:7890"}  # From local wsl
+proxy=${1:-"$HTTP_PROXY"}
 tag=${2:-"cuda_dev"}
 cuda_image="12.0.1-devel-ubuntu20.04"
 
 # Build Docker container
-docker build --build-arg HTTP_PROXY=$proxy --build-arg CUDA_IMAGE=$cuda_image -t $tag .
+docker build --build-arg CUDA_IMAGE=$cuda_image -t $tag .
 
 # Check if build was successful
 if [ $? -eq 0 ]
