@@ -18,7 +18,7 @@ fi
 
 # Assign parameters to variables
 proxy=${1:""}
-tag=${2:-"dev_pytorch"}
+tag=${2:-"llama_dev"}
 
 # Build Docker container
 docker build --build-arg HTTP_PROXY=$proxy -t $tag .
